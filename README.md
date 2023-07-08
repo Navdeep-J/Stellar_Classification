@@ -3,7 +3,8 @@ Classifying cosmic entities based on their distinct characteristics and properti
 
 
 ## Dataset
-The data consists of 100,000 observations of space taken by the SDSS (Sloan Digital Sky Survey). Every observation is described by 17 feature columns and 1 class column which identifies it to be either a star, galaxy or quasar.
+This project aims to classify cosmic entities into their appropriate classes using the [Stellar Classification Dataset - SDSS17](https://www.kaggle.com/datasets/fedesoriano/stellar-classification-dataset-sdss17) from Kaggle. The dataset contains observations taken by the [Sloan Digital Sky Survey (SDSS)](https://www.sdss.org/) and provides valuable information about stars, galaxies, and quasars. <br>
+The data consists of 100,000 observations of space taken by the SDSS (Sloan Digital Sky Survey). Every observation is described by 17 feature columns and 1 class column which identifies it to be either a star, galaxy, or quasar.
 
 
 | # | Feature    | Description                                                     |
@@ -26,3 +27,33 @@ The data consists of 100,000 observations of space taken by the SDSS (Sloan Digi
 | 16 | plate      | Plate ID, identifies each plate in SDSS                         |
 | 17 | MJD        | Modified Julian Date, indicates when the SDSS data was taken    |
 | 18 | fiber_ID   | Fiber ID that identifies the fiber pointing the light in each observation |
+
+## Classification
+By employing machine learning techniques, we will develop a classification model that can accurately predict the class of new cosmic entities based on their features. Through feature engineering, exploratory data analysis, and the implementation of various classification algorithms, we will strive to achieve high-performance predictions. The successful outcome of this project will contribute to our understanding of the universe and aid in astronomical research.
+
+The algorithms which I've used are:-
+```
+- Logistic Regression
+- K-Nearest Neighbors (KNN)
+- Decision Tree
+- Gaussian Naive Bayes (GaussianNB)
+- Random Forest 
+- XGBoost
+```
+I will compare the performance of these algorithms based on their recall scores to select the best-performing one. For certain algorithms with hyperparameters that can take on different values, such as the n_neighbors in KNN or the n_estimators in Random Forest, I will evaluate multiple combinations of hyperparameter values.
+
+I will calculate the recall scores for each combination of hyperparameters and select the one with the highest recall score. Once the best-performing hyperparameter value is determined for each algorithm, I will compare the algorithms based on their corresponding best recall scores. This way, I can identify the algorithm that provides the highest accuracy on the given dataset.
+
+## Libraries/concepts used
+```
+- pandas
+- numpy
+- matplotlib
+- seaborn
+- sklearn (scikit-learn)
+- Label Encoding
+- SMOTE (Synthetic Minority Oversampling Technique)
+- Classification algorithms
+- Naive Bayes classifier
+- Extreme Gradient Boosting
+```
